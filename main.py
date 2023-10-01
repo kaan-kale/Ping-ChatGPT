@@ -1,9 +1,9 @@
 import openai
 import time
 
-API_KEY = "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"
+import os 
 
-openai.api_key = API_KEY
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def calculate_time(func):
     def wrapper(*args, **kwargs):
